@@ -5,30 +5,16 @@ it's not perfect but it's functional. I will continue to make updates as I learn
 def Calculator(ent):
     '''This is the loop that continues calculations until the "=" sign is entered.'''
     rt = 0
+    op = None
     while True:
         num = number_input(input())
         ent.append(num)
-        cnt = count(ent)
-        if cnt > 1:
-            rt = rt_equat(rt, op, num, ent)
-        else:
-            rt += num
+        rt = rt_equat(rt, op, num, ent)
         op = op_input(input())
         ent.append(op)
         if op == "=":
             total(rt, ent)
             return
-
-
-def count(ent):
-    '''This will count how many entries there are so that we can get an
-    accurate running total after the first number input.'''
-    count = 0
-    for i in ent:
-        count += 1
-        if count == 2:
-            return count
-    return count
 
 
 def total(rt, ent):
@@ -73,6 +59,9 @@ def rt_equat(rt, op, num, ent):
     elif op == "/":
         num = zero_test(num, ent)
         rt /= num
+        return rt
+    elif op == None:
+        rt += num
         return rt
 
 
