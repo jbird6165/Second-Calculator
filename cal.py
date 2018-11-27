@@ -1,9 +1,9 @@
 '''This is my second attempt at a Calculator using better practices
 it's not perfect but it's functional. I will continue to make updates as I learn.'''
 
+
 def number_input(n):
     '''This will float the input and request input again if error occurs'''
-
     while True:
         try:
             return float(n)
