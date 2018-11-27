@@ -1,3 +1,5 @@
+import operator
+
 '''This is my second attempt at a Calculator using better practices
 it's not perfect but it's functional. I will continue to make updates as I learn.'''
 
@@ -49,20 +51,20 @@ def op_input(o):
 def rt_equat(rt, op, num, ent):
     '''This takes the sign entered i.e. "+ - * / =" and returns the appropriate equation'''
     if op == "+":
-        rt += num
+        rt = operator.add(rt, num)
         return rt
     elif op == "-":
-        rt -= num
-        return rt
+        rt = operator.sub(rt, num)
+        return
     elif op == "*":
-        rt *= num
+        rt = operator.mul(rt, num)
         return rt
     elif op == "/":
         num = zero_test(num, ent)
-        rt /= num
+        rt = operator.truediv(rt, num)
         return rt
     elif op == None:
-        rt += num
+        rt = operator.add(rt, num)
         return rt
 
 
