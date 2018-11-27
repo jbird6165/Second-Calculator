@@ -2,8 +2,9 @@
 it's not perfect but it's functional. I will continue to make updates as I learn.'''
 
 
-def Calculator(ent):
+def Calculator():
     '''This is the loop that continues calculations until the "=" sign is entered.'''
+    ent = []
     rt = 0
     op = None
     while True:
@@ -76,7 +77,7 @@ def zero_test(num, ent):
             return num
 
 
-entries = []
+
 print("Welcome to Calculator 2.0.\nYou can add, subtract, multiply, and divide!")
 while True:
-    Calculator(entries)
+    Calculator()
