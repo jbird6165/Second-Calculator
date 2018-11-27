@@ -3,7 +3,7 @@ import operator
 '''This is my second attempt at a Calculator using better practices
 it's not perfect but it's functional. I will continue to make updates as I learn.'''
 
-
+#New pull request so you can read it easier.
 def Calculator():
     '''This is the loop that continues calculations until the "=" sign is entered.'''
     ent = []
