@@ -25,7 +25,6 @@ def total(rt, ent):
         print(ent[0])
     else:
         print("Total: " + " " .join(str(x) for x in ent) + " " + str(round(rt, 10)))    # I need to figure out how to remove the .0 when a float returns a .0
-    ent.clear()
     return
 
 
